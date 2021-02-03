@@ -2,16 +2,27 @@
 <html lang="en">
 
 <head>
+  <title>D3 Practice</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>D3 Scatterplot</title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
-  <div id="chart"></div>
-  <script src="https://d3js.org/d3.v6.min.js"></script>
-  <script src="app.js"></script>
+  <div style="text-align: center;">
+    <h2>D3 Scatterplot</h2>
+    <div id="chart"></div>
+  </div>
+  
+  <div style="text-align: center;">
+    <h2>D3 heatmap</h2>
+    <div class="chart" id="heatmap1"></div>
+  </div>
+
+  
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="./js/scatterPlot.js"></script>
+
 </body>
 
 </html>

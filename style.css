@@ -1,9 +1,19 @@
+h2 {
+  font-size: 100px !important;
+}
+
+.flexcontainer {
+  text-align: center;
+  /* display: flex !important;
+  flex-direction: column !important; */
+}
+
 #chart{
   width: 800px;
   height: 800px;
   background-color: #f7f7f7;
   margin: 25px auto;
-  position: relative
+  position: relative;
 }
 
 #tooltip {
