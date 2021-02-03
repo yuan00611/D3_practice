@@ -1,11 +1,12 @@
-h2 {
-  font-size: 100px !important;
-}
 
 .flexcontainer {
-  text-align: center;
-  /* display: flex !important;
-  flex-direction: column !important; */
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 #chart{
