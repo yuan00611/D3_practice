@@ -13,6 +13,19 @@
     <h2>D3 Scatterplot</h2>
     <div id="chart"></div>
   </div>
+
+  <div class="flexcontainer">
+    <h2>D3 Histogram</h2>
+    <select id="metric">
+      <option value="humidity" selected>Humidity</option>
+      <option value="temperature">Temperature</option>
+      <option value="dewPoint">DewPoint</option>
+      <option value="windSpeed">WindSpeed</option>
+      <option value="cloudCover">CloudCover</option>
+      <option value="ozone">Ozone</option>
+    </select>
+    <div id="histogram"></div>
+  </div>
   
   <div class="flexcontainer">
     <h2>D3 heatmap(Linear Scale)</h2>
@@ -37,10 +50,18 @@
     <div id="heatmap4"></div>
   </div>
 
+  <div class="flexcontainer">
+    <h2>D3 Log Scale</h2>
+    <div id="log"></div>
+  </div>
+
+  
   
   <script src="https://d3js.org/d3.v6.min.js"></script>
   <script src="scatterPlot.js"></script>
   <script src="heatmap.js"></script>
+  <script src="log.js"></script>
+  <script src="histogram.js"></script>
 
 </body>
 
