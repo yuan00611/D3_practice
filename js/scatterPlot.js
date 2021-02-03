@@ -1,6 +1,6 @@
 async function drawScatter() {
 	// Data
-	const dataset = await d3.json('../scatterPlotData.json')
+	const dataset = await d3.json('data/scatterPlotData.json')
 
   const xAccessor = (d) => d.currently.humidity
   const yAccessor = (d) => d.currently.apparentTemperature
