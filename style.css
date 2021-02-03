@@ -9,6 +9,7 @@
   justify-content: center;
 }
 
+/* ScatterPlot */
 #chart{
   width: 800px;
   height: 800px;
@@ -28,4 +29,12 @@
 
 #tooltip .metric-date {
   text-decoration: underline;
+}
+
+/* Heatmap */
+#heatmap1{
+  width: 600px;
+  height: 150px;
+  background-color: #f7f7f7;
+  margin: 25px auto;
 }
