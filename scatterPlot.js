@@ -30,6 +30,8 @@ async function drawScatter() {
     `translate(${dimensions.margin.left}, ${dimensions.margin.top})`
   )
 
+  const tooltip = d3.select('#tooltip')
+
   //Scales
   const xScale = d3.scaleLinear()
     .domain(d3.extent(dataset, xAccessor))
@@ -50,6 +52,34 @@ async function drawScatter() {
     .attr('r', 5)
     .attr('fill', 'red')
     .attr('data-temp', yAccessor)
+    .on('mouseenter', function(event, datum) {
+      d3.select(this)
+        .attr('fill', '#120078')
+        .attr('r', 8)
+        
+      tooltip.style('display', 'block')
+        .style('top', yScale(yAccessor(datum)) + 50 + 'px')
+        .style('left', xScale(xAccessor(datum)) + 100 + 'px')
+
+      const formatter = d3.format('.2f')
+      const dateFormatter = d3.timeFormat('%B %-d, %Y')
+
+      tooltip.select('.metric-humidity span')
+        .text(formatter(xAccessor(datum)))
+
+      tooltip.select('.metric-temp span')
+        .text(formatter(yAccessor(datum)))
+
+      tooltip.select('.metric-date')
+        .text(dateFormatter(datum.currently.time))
+    })
+    .on('mouseleave', function(event) {
+      d3.select(this)
+        .attr('fill', 'red')
+        .attr('r', 5)
+
+      tooltip.style('display', 'none')
+    })
 
   // Axes
   const xAxis = d3.axisBottom(xScale)
